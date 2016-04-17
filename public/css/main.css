@@ -4,12 +4,12 @@
 }
 
 #expression-panel {
-	height: 40px;
+	height: 35px;
 	width: 170px;
 	text-align: right;
 }
 
-.box {
+#center_box {
     position:fixed;
     margin-left:-150px; /* half of width */
     margin-top:-150px;  /* half of height */

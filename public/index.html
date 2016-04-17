@@ -2,15 +2,17 @@
 <html>
 	<head>
 		<title>WebCalculator</title>
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
 		<link href="css/main.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="js/main.js"></script>
+
 	</head>
-	<body>
-		<div class="box">
+	<body background="images/bg2.jpg">
+		<div id="center_box">
 			<h1>WebCalculator</h1>
 			<table>
 			  <tr>
-			  	<input type="text" name="expression" id="expression-panel">
+			  	<input type="text" name="expression" id="expression-panel" onkeypress="return keyboardEvent(event)" >
 			  </tr>
 			  <tr>
 			    <td><button onclick="appendSymbol('1')" type="button" id="button">1 </button></td>
@@ -37,9 +39,12 @@
 			    <td><button onclick="appendSymbol('+')" type="button" id="button">+</button></td>
 			  </tr>
 			  <tr>
-			  	<td><button onclick="document.getElementById('expression-panel').value = ''" type="button" id="button">C</button></td>
+			  	<td><button onclick="clearDisplay()" type="button" id="button">C</button></td>
+
+			  	<!-- These two next buttons could be used to enable parenthesis -->
 			  	<td><button type="button" id="button" disabled></button></td>
-			  	<td><button type="button" id="button" disabled></button></td>			  	
+			  	<td><button type="button" id="button" disabled></button></td>
+
 			    <td><button onclick="evaluateExpression()" type="button" id="button">=</button></td>
 			  </tr>
 			</table>
