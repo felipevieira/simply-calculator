@@ -26,7 +26,7 @@ function normalizeExpression(expression) {
 	expression = expression.replace(/,/g,'.')
 
 	// Replacing exponentiation symbols
-	expression = expression.replace(/\-?[0-9](\^\-?[0-9])+/g, function myFunction(exponentialExpression){
+	expression = expression.replace(/\-?[0-9]+(\^\-?[0-9]+)+/g, function myFunction(exponentialExpression){
 		exponents = exponentialExpression.split("^")
 		currentValue = Math.pow(exponents[exponents.length-2], exponents[exponents.length-1])
 		for (i = exponents.length - 3; i >= 0; i--) {
